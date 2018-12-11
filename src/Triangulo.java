@@ -7,6 +7,10 @@ public class Triangulo {
 	private int base;
 	private int altura;
 	
+	/**
+	 * @param base
+	 * @param altura
+	 */
 	public Triangulo (int base, int altura) {
 		
 		this.base = base;

@@ -8,6 +8,11 @@ public class Trapecio {
 	private int baseMenor;
 	private int altura;
 	
+	/**
+	 * @param baseMayor
+	 * @param baseMenor
+	 * @param altura
+	 */
 	public Trapecio (int baseMayor, int baseMenor, int altura) {
 		
 		this.baseMayor = baseMayor;

@@ -67,10 +67,33 @@ public class Gui {
 				
 				break;
 				
-			case 3: 
+			case 3:
+				// Opcion rectangulo.
+				System.out.println("Introduce el ancho:");
+				int ancho = sc.nextInt();
+				System.out.println("Introduce el alto:");
+				int alto = sc.nextInt();
+				
+				while ((ancho < 2 || alto < 2) || (ancho > 10 || alto > 10)) {
+					
+					System.out.println("DATOS INCORRECTOS");
+					System.out.println("Introduce el ancho:");
+					ancho = sc.nextInt();
+					System.out.println("Introduce el alto:");
+					alto = sc.nextInt();
+					
+				}
+				
+				Rectangulo rectangulo = new Rectangulo(ancho,alto);
+				System.out.println(rectangulo);
+				
 				break;
 				
-			default: break;
+			default: 
+				
+				System.out.println("Saliendo del programa.");
+				
+				break;
 		
 		}
 
