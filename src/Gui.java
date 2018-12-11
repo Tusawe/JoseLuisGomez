@@ -12,7 +12,7 @@ public class Gui {
 		
 		while (op > 4 || op < 1) {
 		
-			System.out.println("Opción incorrecta.");
+			System.out.println("Opción incorrecta. Introduce otra opción:");
 			op = sc.nextInt();
 			
 		};
@@ -25,12 +25,46 @@ public class Gui {
 				int base = sc.nextInt();
 				System.out.println("Introduce la altura:");
 				int altura = sc.nextInt();
+				
+				while (base <= 0 || altura <= 0) {
+					
+					System.out.println("DATOS INCORRECTOS");
+					System.out.println("Introduce la base:");
+					base = sc.nextInt();
+					System.out.println("Introduce la altura:");
+					altura = sc.nextInt();
+					
+				}
+				
 				Triangulo triangulo = new Triangulo(base,altura);
-				System.out.printf("El area del triangulo es %.2f",triangulo.calcularAreaTriangulo());
+				System.out.println(triangulo);
 				
 				break;
 				
 			case 2: 
+				// Opcion trapecio.
+				System.out.println("Introduce la base mayor:");
+				int baseMayor = sc.nextInt();
+				System.out.println("Introduce la base menor:");
+				int baseMenor = sc.nextInt();
+				System.out.println("Introduce la base altura:");
+				int altura2 = sc.nextInt();
+				
+				while (baseMayor <= baseMenor || altura2 <= 0) {
+					
+					System.out.println("DATOS INCORRECTOS");
+					System.out.println("Introduce la base mayor:");
+					baseMayor = sc.nextInt();
+					System.out.println("Introduce la base menor:");
+					baseMenor = sc.nextInt();
+					System.out.println("Introduce la base altura:");
+					altura2 = sc.nextInt();
+					
+				}
+				
+				Trapecio trapecio = new Trapecio(baseMayor,baseMenor,altura2);
+				System.out.println(trapecio);
+				
 				break;
 				
 			case 3: 

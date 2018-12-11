@@ -50,5 +50,13 @@ public class Triangulo {
 		return base * altura / 2;
 		
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "El area del triangulo es " + calcularAreaTriangulo();
+	}
 	
 }
